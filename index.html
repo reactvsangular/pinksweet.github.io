@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tuto</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-jsx.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js" charset="utf-8"></script>
+</head>
+<body>
+  <div style="background-color: #95a5a6; 100%; width: 230px; height: 100vh; position: fixed; left: 0; top: 0;">
+    <!-- menu -->
+    <div class="ui secondary vertical pointing menu" style="text-align: center">
+      <a class="item active">
+        Accueil
+      </a>
+      <a class="item">
+        Prérequis
+      </a>
+      <a class="item">
+        Pour commencer
+      </a>
+      <a class="item">
+        Tutoriels
+      </a>
+    </div>
+  </div>
+  <div class="ui fluid container" style="width: calc(100% - 243px); margin-left: 243px!important">
+      <div class="ui grid">
+        <div class="two columns row" style="padding-bottom: 0;">
+          <div class="eight wide column" style="background-color: #ecf0f1; padding: 10px">
+            <!-- react -->
+            <div style="text-align: center">
+              <img src="reactLogo.png" style="height: 100px">
+            </div>
+            <h1>Qu'est-ce que React ?</h1>
+            React est une bibliothèque Javascript permettant de construire des interfaces utilisateurs
+
+            <h1>Prérequis</h1>
+            Installer Node.js
+
+            <h1>Pour commencer</h1>
+            <h3>Installation</h3>
+            <pre><code class="language-jsx">
+npm install -g create-react-app
+            </code></pre>
+            <h3>Création d'une application</h3>
+            <pre><code class="language-jsx">
+create-react-app myApp
+cd myApp
+            </code></pre>
+            <h1>Tutoriel</h1>
+            <!-- texte-->
+            <h3>Ecrire du texte</h3>
+            <pre><code class="language-jsx">
+ReactDOM.render(
+&lt;h1&gt;Bonjour, voici du texte !&lt;/h1&gt;,
+document.getElementById('bonjour')
+);
+            </code></pre>
+            <!-- bouton React-->
+            <h3>Créer un bouton</h3>
+            <pre><code class="language-jsx">
+class Button extends React.Component {
+render() {
+return (
+  &lt;div className="myButton"&gt;
+    Bouton
+  &lt;/div&gt;
+);
+}
+}
+            </code></pre>
+            <div id="buttonReact"></div>
+
+            <!-- bouton React style -->
+            <h3>Mettre du style</h3>
+            <pre><code class="language-jsx">
+class Button2 extends React.Component {
+render() {
+return (
+  &lt;div className=&quot;myButton&quot; style={{backgroundColor: &quot;#f1c40f&quot;, color: &quot;#2c3e50&quot;}}&gt;
+    Bouton
+  &lt;/div&gt;
+);
+}
+}
+
+ReactDOM.render(&lt;Button2 /&gt;, document.getElementById('buttonReactStyle'));
+            </code></pre>
+            <div id="buttonReactStyle"></div>
+
+            <!-- bouton React props -->
+            <h3>Les props</h3>
+            <pre><code class="language-jsx">
+class Button extends React.Component {
+render() {
+return (
+  &lt;div className=&quot;myButton&quot;&gt;
+    {this.props.text}
+  &lt;/div&gt;
+);
+}
+}
+
+ReactDOM.render(&lt;Button text=&quot;Nouveau texte&quot; /&gt;, document.getElementById('buttonReactProps'));
+            </code></pre>
+            <div id="buttonReactProps"></div>
+
+            <!-- bouton React state -->
+            <h3>La state</h3>
+            <pre><code class="language-jsx">
+class Button extends React.Component {
+state = {
+clicked: false
+}
+
+constructor() {
+super();
+this.handleClick = this.handleClick.bind(this);
+}
+
+handleClick() {
+this.setState({ clicked: !this.state.clicked });
+}
+
+render() {
+return (
+  &lt;div
+    className=&quot;myButton&quot;
+    style={{ backgroundColor: this.state.clicked ? 'red' : 'blue' }}
+    onClick={this.handleClick}
+  &gt;
+    {this.props.text}
+  &lt;/div&gt;
+);
+}
+}
+
+ReactDOM.render(&lt;Button text=&quot;Changement&quot; /&gt;, document.getElementById('buttonReactState'));
+            </code></pre>
+            <div id="buttonReactState"></div>
+          </div>
+          <div class="eight wide column" style="background-color: #3498db; color: white; padding: 10px 25px 10px 10px;">
+            <!-- angular -->
+            <div style="text-align: center">
+              <img src="angularLogo.png" style="height: 100px;" >
+            </div>
+            <h1>Qu'est-ce qu'Angular ?</h1>
+            Angular est un framework Javascript open-source conçu pour créer des applications web
+
+            <h1>Prérequis</h1>
+
+            <h1>Pour commencer</h1>
+
+            <h1>Tutoriel</h1>
+            <pre><code class="language-jsx">
+            mettre code
+            </code></pre>
+            <div id="buttonAngular"></div>
+
+            <pre><code class="language-jsx">
+            mettre code
+            </code></pre>
+
+            <pre><code class="language-jsx">
+            mettre code
+            </code></pre>
+
+          </div>
+        </div>
+      </div>
+      <div class="row" style="background-color: purple; color: pink; margin-left: -13px; padding-top: 5px; height: 30px; margin-top: 14px; text-align: center;">Made by Cindy Rébeillé & Cassandra Clech</div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="main.js" type="text/babel" data-presets="react,es2015,stage-0" charset="utf-8"></script>
+</body>
+</html>
