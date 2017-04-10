@@ -13,38 +13,43 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js" charset="utf-8"></script>
 </head>
 <body>
-  <div style="background-color: #95a5a6; 100%; width: 230px; height: 100vh; position: fixed; left: 0; top: 0;">
+  <div style="background-color: #f39c12; 100%; width: 230px; height: 100vh; position: fixed; left: 0; top: 0;">
     <!-- menu -->
     <div class="ui secondary vertical pointing menu" style="text-align: center">
-      <a class="item active">
+      <a class="item active" href="#home" style="color: white">
         Accueil
       </a>
-      <a class="item">
+      <a class="item" href="#prerequis" style="color: white">
         Prérequis
       </a>
-      <a class="item">
+      <a class="item" href="#start" style="color: white">
         Pour commencer
       </a>
-      <a class="item">
+      <a class="item" href="#tutos" style="color: white">
         Tutoriels
       </a>
     </div>
+    <a href="#home"><button class="ui icon button" style="margin-top: 600px; margin-left: 40%">
+      <i class="arrow up icon"></i>
+    </button><a/>
   </div>
-  <div class="ui fluid container" style="width: calc(100% - 243px); margin-left: 243px!important">
+  <div class="ui fluid container" style="width: calc(100% - 243px); margin-left: 243px!important" id="home">
       <div class="ui grid">
         <div class="two columns row" style="padding-bottom: 0;">
-          <div class="eight wide column" style="background-color: #ecf0f1; padding: 10px">
+          <div class="eight wide column" style="background-color: #ecf0f1; padding: 10px; border: black; border-style: ridge">
             <!-- react -->
             <div style="text-align: center">
               <img src="reactLogo.png" style="height: 100px">
             </div>
+			<br/>
+			<hr style="color: black; height: 5px; background-color: black"/>
             <h1>Qu'est-ce que React ?</h1>
             React est une bibliothèque Javascript permettant de construire des interfaces utilisateurs
 
-            <h1>Prérequis</h1>
-            Installer Node.js
+            <h1 id="prerequis">Prérequis</h1>
+            Installer Node.js et Npm
 
-            <h1>Pour commencer</h1>
+            <h1 id="start">Pour commencer</h1>
             <h3>Installation</h3>
             <pre><code class="language-jsx">
 npm install -g create-react-app
@@ -54,7 +59,7 @@ npm install -g create-react-app
 create-react-app myApp
 cd myApp
             </code></pre>
-            <h1>Tutoriel</h1>
+            <h1 id="tutos">Tutoriel</h1>
             <!-- texte-->
             <h3>Ecrire du texte</h3>
             <pre><code class="language-jsx">
@@ -146,17 +151,24 @@ ReactDOM.render(&lt;Button text=&quot;Changement&quot; /&gt;, document.getElemen
             </code></pre>
             <div id="buttonReactState"></div>
           </div>
-          <div class="eight wide column" style="background-color: #3498db; color: white; padding: 10px 25px 10px 10px;">
+          <div class="eight wide column" style="background-color: #3498db; color: white; padding: 10px 25px 10px 10px; border: white; border-style: ridge">
             <!-- angular -->
             <div style="text-align: center">
               <img src="angularLogo.png" style="height: 100px;" >
             </div>
+			<br/>
+			<hr style="color: white; height: 5px; background-color: white"/>
             <h1>Qu'est-ce qu'Angular ?</h1>
             Angular est un framework Javascript open-source conçu pour créer des applications web
 
             <h1>Prérequis</h1>
+            Installer Node.js et Npm
 
             <h1>Pour commencer</h1>
+            <h3>Installation</h3>
+            <pre><code class="language-jsx">
+npm install -g @angular/cli
+            </code></pre>
 
             <h1>Tutoriel</h1>
             <pre><code class="language-jsx">
@@ -175,7 +187,7 @@ ReactDOM.render(&lt;Button text=&quot;Changement&quot; /&gt;, document.getElemen
           </div>
         </div>
       </div>
-      <div class="row" style="background-color: purple; color: pink; margin-left: -13px; padding-top: 5px; height: 30px; margin-top: 14px; text-align: center;">Made by Cindy Rébeillé & Cassandra Clech</div>
+      <div class="row" style="background-color: #2574A9; color: white; margin-left: -13px; padding-top: 5px; height: 30px; margin-top: 14px; text-align: center; border: #2574A9; border-style: ridge"><b>Made by Cindy Rébeillé & Cassandra Clech</b></div>
     </div>
   </div>
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
