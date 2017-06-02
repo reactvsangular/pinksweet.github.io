@@ -2,63 +2,136 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Tuto</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css">
+  <title>Angular2 VS React Js - Tutoriel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/2.7.0/metisMenu.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+<!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js" charset="utf-8"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-jsx.min.js" charset="utf-8"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js" charset="utf-8"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="lib/FA/css/font-awesome.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div style="background-color: #f39c12; 100%; width: 230px; height: 100vh; position: fixed; left: 0; top: 0;">
-    <!-- menu -->
-    <div class="ui secondary vertical pointing menu" style="text-align: center">
-      <a class="item active" href="#home" style="color: white">
-        Accueil
-      </a>
-      <a class="item" href="#prerequis" style="color: white">
-        Prérequis
-      </a>
-      <a class="item" href="#start" style="color: white">
-        Pour commencer
-      </a>
-      <a class="item" href="#tutos" style="color: white">
-        Tutoriels
-      </a>
-    </div>
-    <a href="#home" style="display: flex; justify-content: center; align-items: flex-end;"><button class="ui icon button">
-      <i class="arrow up icon"></i>
-    </button><a/>
+<body class="pace-done">
+  <div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+      <div class="sidebar-collapse">
+        <ul class="nav" id="side-menu">
+          <li class="nav-header">
+            <div class="profile-element">
+              <span>
+                <img src="img/logo.png" alt="Logo iut">
+              </span>
+            </div> 
+            <div class="logo-element">
+              IUT
+            </div>   
+          </li>
+            <li>
+              <a href="">
+                <i class="fa fa-compass"></i>
+                <span class="nav-label">Accueil</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa fa-compass"></i>
+                <span class="nav-label">Prérequis</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa fa-compass"></i>
+                <span class="nav-label">Pour commencer</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa fa-compass"></i>
+                <span class="nav-label">Tutoriels</span>
+              </a>
+            </li>
+        </ul>
+      </div> 
+    </nav> 
+    <div id="page-wrapper" class="gray-bg">
+      <div class="row border-bottom">
+        <nav class="navbar navbar-static-top" role="navigation">
+          <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#">
+              <i class="fa fa-bars"></i> 
+            </a>
+          </div>
+        </nav>
+      </div>
+      <div class="wrapper wrapper-content animated fadeInRight">
+        <button class="btn btn-primary btn-sm" id="reduce-ang"><i class="fa fa-compass"></i></button>
+        <button class="btn btn-primary btn-sm" id="reduce-react"><i class="fa fa-compass"></i></button>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="ibox">
+              <div class="ibox-title">
+                  <h3>Prérequis</h3>
+              </div>
+              <div class="ibox-content">
+                Pour ce tutoriel, nous partons du principe que vous connaissez le HTML, le CSS et bien-sûr le Javascript. 
+
+                Si vous avez déjà jeté un coup d'oeil à Angular2, vous avez pu remarquer l'utilisation exclusif de TypeScript et non pas de Javascript pur. C'est pourquoi, les morceaux de code suivants sont redigés en TypeScript. Si vous ne connaissez pas ce sur-ensemble, faites un tour sur le <a href="https://www.typescriptlang.org/docs/home.html">site officiel</a>
+
+                Avant de débuter le tutoriel, installer <a href="https://www.npmjs.com/get-npm">node.js ainsi que npm</a> sur votre ordinateur.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 b-r angular">
+            <div class="row wrapper white-bg page-heading">
+              <h2>Angular 2</h2>
+              <img src="angularLogo.png" class="img-header">
+            </div>
+
+          </div>
+          <div class="col-xs-6 react">
+            <div class="row wrapper white-bg page-heading">
+              <h2>React Js</h2>
+              <img src="reactLogo.png" class="img-header">
+            </div>
+            <div class="wrapper wrapper-content">
+              <div class="ibox">
+                <div class="ibox-title">
+                  <h5>Installation</h5>
+                </div>
+                <div class="ibox-content">
+                  <p>Commençons par installer ReactJs. <br/> Ouvrez une invite de commande et tapez-y la commande suivante :</p>
+                  <code>npm install -g create-react-app</code>
+                  Cette ligne de commande nous permet de ne pas commencer une application "nue". Toutes vos futures applications ReactJs seront déjà configurées avec Babel ou encore WebPack. 
+                </div>
+            </div>
+            <div class="ibox">
+                <div class="ibox-title">
+                  <h5>Création d'une application</h5>
+                </div>
+                <div class="ibox-content">
+                  <p>Retournez dans votre invite de commande et tapez la commande suivante :</p>
+                  <code>create-react-app nomAppli</code>
+                  Remplacez nomAppli pour votre propre nom d'appli. <br>
+                  Placez vous dans le dossier de votre appli : 
+                  <code>cd nomAppli</code>
+
+                </div>
+            </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div> 
   </div>
   <div class="ui fluid container" style="width: calc(100% - 243px); margin-left: 243px!important" id="home">
       <div class="ui grid">
         <div class="two columns row" style="padding-bottom: 0;">
           <div class="eight wide column" style="background-color: #ecf0f1; padding: 10px; border: black; border-style: ridge">
             <!-- react -->
-            <div style="text-align: center">
-              <img src="reactLogo.png" style="height: 100px">
-            </div>
-			<br/>
-			<hr style="color: black; height: 5px; background-color: black"/>
-            <h1>Qu'est-ce que React ?</h1>
-            React est une bibliothèque Javascript permettant de construire des interfaces utilisateurs
-
-            <h1 id="prerequis">Prérequis</h1>
-            Installer Node.js et Npm
-
-            <h1 id="start">Pour commencer</h1>
-            <h3>Installation</h3>
-            <pre><code class="language-jsx">
-npm install -g create-react-app
-            </code></pre>
-            <h3>Création d'une application</h3>
-            <pre><code class="language-jsx">
-create-react-app myApp
-cd myApp
-            </code></pre>
             <h1 id="tutos">Tutoriel</h1>
             <!-- texte-->
             <h3>Ecrire du texte</h3>
@@ -151,46 +224,25 @@ ReactDOM.render(&lt;Button text=&quot;Changement&quot; /&gt;, document.getElemen
             </code></pre>
             <div id="buttonReactState"></div>
           </div>
-          <div class="eight wide column" style="background-color: #3498db; color: white; padding: 10px 25px 10px 10px; border: white; border-style: ridge">
-            <!-- angular -->
-            <div style="text-align: center">
-              <img src="angularLogo.png" style="height: 100px;" >
-            </div>
-			<br/>
-			<hr style="color: white; height: 5px; background-color: white"/>
-            <h1>Qu'est-ce qu'Angular ?</h1>
-            Angular est un framework Javascript open-source conçu pour créer des applications web
-
-            <h1>Prérequis</h1>
-            Installer Node.js et Npm
-
-            <h1>Pour commencer</h1>
-            <h3>Installation</h3>
-            <pre><code class="language-jsx">
-npm install -g @angular/cli
-            </code></pre>
-
-            <h1>Tutoriel</h1>
-            <pre><code class="language-jsx">
-            mettre code
-            </code></pre>
-            <div id="buttonAngular"></div>
-
-            <pre><code class="language-jsx">
-            mettre code
-            </code></pre>
-
-            <pre><code class="language-jsx">
-            mettre code
-            </code></pre>
-
-          </div>
         </div>
       </div>
       <div class="row" style="background-color: #2574A9; color: white; margin-left: -13px; padding-top: 5px; height: 30px; margin-top: 14px; text-align: center; border: #2574A9; border-style: ridge"><b>Made by Cindy Rébeillé & Cassandra Clech</b></div>
     </div>
   </div>
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-  <script src="main.js" type="text/babel" data-presets="react,es2015,stage-0" charset="utf-8"></script>
+    
+    <!-- Prism -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-jsx.min.js" charset="utf-8"></script>
+    <!-- fin Prisme -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js" charset="utf-8"></script>
+    <!--<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="main.js" type="text/babel" data-presets="react,es2015,stage-0" charset="utf-8"></script>-->
+
+    <script src="lib/JQuery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" charset="utf-8"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
