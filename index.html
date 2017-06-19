@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/2.7.0/metisMenu.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
-<!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"> -->
+  <!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css">
   <link rel="stylesheet" href="lib/FA/css/font-awesome.css">
   <link rel="stylesheet" href="style.css">
@@ -26,30 +26,30 @@
               IUT
             </div>   
           </li>
-            <li>
-              <a href="">
-                <i class="fa fa-compass"></i>
-                <span class="nav-label">Accueil</span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <i class="fa fa-compass"></i>
-                <span class="nav-label">Prérequis</span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <i class="fa fa-compass"></i>
-                <span class="nav-label">Pour commencer</span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <i class="fa fa-compass"></i>
-                <span class="nav-label">Tutoriels</span>
-              </a>
-            </li>
+          <li>
+            <a href="">
+              <i class="fa fa-compass"></i>
+              <span class="nav-label">Accueil</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fa fa-compass"></i>
+              <span class="nav-label">Prérequis</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fa fa-compass"></i>
+              <span class="nav-label">Pour commencer</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fa fa-compass"></i>
+              <span class="nav-label">Tutoriels</span>
+            </a>
+          </li>
         </ul>
       </div> 
     </nav> 
@@ -64,20 +64,20 @@
         </nav>
       </div>
       <div class="wrapper wrapper-content animated fadeInRight">
-        <button class="btn btn-primary btn-sm" id="reduce-ang"><i class="fa fa-compass"></i></button>
-        <button class="btn btn-primary btn-sm" id="reduce-react"><i class="fa fa-compass"></i></button>
+        <!-- <button class="btn btn-primary btn-sm" id="reduce-ang"><i class="fa fa-compass"></i></button>
+        <button class="btn btn-primary btn-sm" id="reduce-react"><i class="fa fa-compass"></i></button> -->
         <div class="row">
           <div class="col-xs-12">
             <div class="ibox">
               <div class="ibox-title">
-                  <h3>Prérequis</h3>
+                <h3>Prérequis</h3>
               </div>
               <div class="ibox-content">
                 Pour ce tutoriel, nous partons du principe que vous connaissez le HTML, le CSS et bien-sûr le Javascript. 
 
                 Si vous avez déjà jeté un coup d'oeil à Angular2, vous avez pu remarquer l'utilisation exclusif de TypeScript et non pas de Javascript pur. C'est pourquoi, les morceaux de code suivants sont redigés en TypeScript. Si vous ne connaissez pas ce sur-ensemble, faites un tour sur le <a href="https://www.typescriptlang.org/docs/home.html">site officiel</a>
 
-                Avant de débuter le tutoriel, installer <a href="https://www.npmjs.com/get-npm">node.js ainsi que npm</a> sur votre ordinateur.
+                Avant de débuter le tutoriel, installez <a href="https://www.npmjs.com/get-npm">node.js ainsi que npm</a> sur votre ordinateur.
               </div>
             </div>
           </div>
@@ -88,13 +88,6 @@
               <h2>Angular 2</h2>
               <img src="angularLogo.png" class="img-header">
             </div>
-
-          </div>
-          <div class="col-xs-6 react">
-            <div class="row wrapper white-bg page-heading">
-              <h2>React Js</h2>
-              <img src="reactLogo.png" class="img-header">
-            </div>
             <div class="wrapper wrapper-content">
               <div class="ibox">
                 <div class="ibox-title">
@@ -102,147 +95,194 @@
                 </div>
                 <div class="ibox-content">
                   <p>Commençons par installer ReactJs. <br/> Ouvrez une invite de commande et tapez-y la commande suivante :</p>
-                  <code>npm install -g create-react-app</code>
-                  Cette ligne de commande nous permet de ne pas commencer une application "nue". Toutes vos futures applications ReactJs seront déjà configurées avec Babel ou encore WebPack. 
+                  <code>npm install -g @angular/cli</code>
+                  Cette commande permet d'installer la CLI (Command-line Interface) d'Angular. Grâce à elle, nous pourrons créer facilement une application Angular, des squelettes de fichiers...
                 </div>
-            </div>
-            <div class="ibox">
+              </div>
+              <div class="ibox">
                 <div class="ibox-title">
                   <h5>Création d'une application</h5>
                 </div>
                 <div class="ibox-content">
-                  <p>Retournez dans votre invite de commande et tapez la commande suivante :</p>
-                  <code>create-react-app nomAppli</code>
+                  <p>Retournons dans notre invite de commande et tapons la commande suivante :</p>
+                  <code>ng new nomAppli</code>
                   Remplacez nomAppli pour votre propre nom d'appli. <br>
                   Placez vous dans le dossier de votre appli : 
                   <code>cd nomAppli</code>
+                  Vérifions que la création s'est bien déroulée et lançons le serveur d'Angular : 
+                  <code>ng serve</code>
+                  Nous obtenons l'écran suivant : 
+                  <img src="" alt="">
+                </div>
+              </div>
+              <div class="ibox">
+                <div class="ibox-title">
+                  <h5>Premier Composant</h5>
+                </div>
+                <div class="ibox-content">
+                  <p>Retournons dans notre invite de commande et tapons la commande suivante :</p>
+                  <code>ng new nomAppli</code>
+                  Remplacez nomAppli pour votre propre nom d'appli. <br>
+                  Placez vous dans le dossier de votre appli : 
+                  <code>cd nomAppli</code>
+                  Vérifions que la création s'est bien déroulée et lançons le serveur d'Angular : 
+                  <code>ng serve</code>
+                  Nous obtenons l'écran suivant : 
+                  <img src="" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 react">
+            <div class="row wrapper white-bg page-heading">
+                <h2>React Js</h2>
+                <img src="reactLogo.png" class="img-header">
+            </div>
+            <div class="wrapper wrapper-content">
+              <div class="ibox">
+                <div class="ibox-title">
+                  <h5>Installation</h5>
+                </div>
+                <div class="ibox-content">
+                    <p>Commençons par installer ReactJs. <br/> Ouvrez une invite de commande et tapez-y la commande suivante :</p>
+                    <code>npm install -g create-react-app</code>
+                    Cette ligne de commande nous permet de ne pas commencer une application "nue". Toutes vos futures applications ReactJs seront déjà configurées avec Babel ou encore WebPack. 
+                </div>
+              </div>
+              <div class="ibox">
+                <div class="ibox-title">
+                  <h5>Création d'une application</h5>
+                </div>
+                <div class="ibox-content">
+                    <p>Retournez dans votre invite de commande et tapez la commande suivante :</p>
+                    <code>create-react-app nomAppli</code>
+                    Remplacez nomAppli pour votre propre nom d'appli. <br>
+                    Placez vous dans le dossier de votre appli : 
+                    <code>cd nomAppli</code>
 
                 </div>
-            </div>
-            </div>
+              </div>
+              <div class="ibox">
+                <div class="ibox-title">
+                  <h5>Premiers pas avec React DOM</h5>
+                </div>
+                <div class="ibox-content">
+                    <p>Pour débuter, rendons-nous dans notre fichier Js et tapons les lignes suivantes :</p>
+                    <pre><code class="language-jsx">
+                      ReactDOM.render(
+                      &lt;h1&gt;Bonjour, voici du texte !&lt;/h1&gt;,
+                      document.getElementById('bonjour')
+                      );
+                    </code></pre>
+                    Félicitations vous venez de créer votre premier élément de DOM en JSX : une balise titre H1. <br>
+                    Et si nous créions un bouton ?
+                    <pre><code class="language-jsx">
+                      class Button extends React.Component {
+                      render() {
+                      return (
+                        &lt;div className="myButton"&gt;
+                          Bouton
+                        &lt;/div&gt;
+                      );
+                      }
+                      }
+                    </code></pre>
+                    <button class="myButton">Bouton</button> <br>
+                    Un peu triste, non ? Ajoutons du style !
+                    <pre><code class="language-jsx">
+                      class Button2 extends React.Component {
+                      render() {
+                      return (
+                        &lt;div className=&quot;myButton&quot; style={{backgroundColor: &quot;#f1c40f&quot;, color: &quot;#2c3e50&quot;}}&gt;
+                          Bouton
+                        &lt;/div&gt;
+                      );
+                      }
+                      }
 
+                      ReactDOM.render(&lt;Button2 /&gt;, document.getElementById('buttonReactStyle'));
+                    </code></pre>
+                    <div id="buttonReactStyle"></div>
+                </div>
+              </div>
+              <div class="ibox">
+                <div class="ibox-title">
+                  <h5>Les props</h5>
+                </div>
+                <div class="ibox-content">
+                    <pre><code class="language-jsx">
+                        class Button extends React.Component {
+                        render() {
+                        return (
+                          &lt;div className=&quot;myButton&quot;&gt;
+                            {this.props.text}
+                          &lt;/div&gt;
+                        );
+                        }
+                        }
+
+                        ReactDOM.render(&lt;Button text=&quot;Nouveau texte&quot; /&gt;, document.getElementById('buttonReactProps'));
+                  </code></pre>
+                  <div id="buttonReactProps"></div>
+                </div>
+              </div>
+              <div class="ibox">
+                <div class="ibox-title">
+                  <h5>La State</h5>
+                </div>
+                <div class="ibox-content">
+                    <pre><code class="language-jsx">
+                      class Button extends React.Component {
+                      state = {
+                      clicked: false
+                      }
+
+                      constructor() {
+                      super();
+                      this.handleClick = this.handleClick.bind(this);
+                      }
+
+                      handleClick() {
+                      this.setState({ clicked: !this.state.clicked });
+                      }
+
+                      render() {
+                      return (
+                        &lt;div
+                          className=&quot;myButton&quot;
+                          style={{ backgroundColor: this.state.clicked ? 'red' : 'blue' }}
+                          onClick={this.handleClick}
+                        &gt;
+                          {this.props.text}
+                        &lt;/div&gt;
+                      );
+                      }
+                      }
+
+                      ReactDOM.render(&lt;Button text=&quot;Changement&quot; /&gt;, document.getElementById('buttonReactState'));
+                    </code></pre>
+                    <div id="buttonReactState"></div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </div> 
       </div>
 
-    </div> 
-  </div>
-  <div class="ui fluid container" style="width: calc(100% - 243px); margin-left: 243px!important" id="home">
-      <div class="ui grid">
-        <div class="two columns row" style="padding-bottom: 0;">
-          <div class="eight wide column" style="background-color: #ecf0f1; padding: 10px; border: black; border-style: ridge">
-            <!-- react -->
-            <h1 id="tutos">Tutoriel</h1>
-            <!-- texte-->
-            <h3>Ecrire du texte</h3>
-            <pre><code class="language-jsx">
-ReactDOM.render(
-&lt;h1&gt;Bonjour, voici du texte !&lt;/h1&gt;,
-document.getElementById('bonjour')
-);
-            </code></pre>
-            <!-- bouton React-->
-            <h3>Créer un bouton</h3>
-            <pre><code class="language-jsx">
-class Button extends React.Component {
-render() {
-return (
-  &lt;div className="myButton"&gt;
-    Bouton
-  &lt;/div&gt;
-);
-}
-}
-            </code></pre>
-            <div id="buttonReact"></div>
 
-            <!-- bouton React style -->
-            <h3>Mettre du style</h3>
-            <pre><code class="language-jsx">
-class Button2 extends React.Component {
-render() {
-return (
-  &lt;div className=&quot;myButton&quot; style={{backgroundColor: &quot;#f1c40f&quot;, color: &quot;#2c3e50&quot;}}&gt;
-    Bouton
-  &lt;/div&gt;
-);
-}
-}
+        <!-- Prism -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-jsx.min.js" charset="utf-8"></script>
+        <!-- fin Prisme -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js" charset="utf-8"></script>
+<!--         // <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        // <script src="main.js" type="text/babel" data-presets="react,es2015,stage-0" charset="utf-8"></script> -->
 
-ReactDOM.render(&lt;Button2 /&gt;, document.getElementById('buttonReactStyle'));
-            </code></pre>
-            <div id="buttonReactStyle"></div>
-
-            <!-- bouton React props -->
-            <h3>Les props</h3>
-            <pre><code class="language-jsx">
-class Button extends React.Component {
-render() {
-return (
-  &lt;div className=&quot;myButton&quot;&gt;
-    {this.props.text}
-  &lt;/div&gt;
-);
-}
-}
-
-ReactDOM.render(&lt;Button text=&quot;Nouveau texte&quot; /&gt;, document.getElementById('buttonReactProps'));
-            </code></pre>
-            <div id="buttonReactProps"></div>
-
-            <!-- bouton React state -->
-            <h3>La state</h3>
-            <pre><code class="language-jsx">
-class Button extends React.Component {
-state = {
-clicked: false
-}
-
-constructor() {
-super();
-this.handleClick = this.handleClick.bind(this);
-}
-
-handleClick() {
-this.setState({ clicked: !this.state.clicked });
-}
-
-render() {
-return (
-  &lt;div
-    className=&quot;myButton&quot;
-    style={{ backgroundColor: this.state.clicked ? 'red' : 'blue' }}
-    onClick={this.handleClick}
-  &gt;
-    {this.props.text}
-  &lt;/div&gt;
-);
-}
-}
-
-ReactDOM.render(&lt;Button text=&quot;Changement&quot; /&gt;, document.getElementById('buttonReactState'));
-            </code></pre>
-            <div id="buttonReactState"></div>
-          </div>
-        </div>
-      </div>
-      <div class="row" style="background-color: #2574A9; color: white; margin-left: -13px; padding-top: 5px; height: 30px; margin-top: 14px; text-align: center; border: #2574A9; border-style: ridge"><b>Made by Cindy Rébeillé & Cassandra Clech</b></div>
-    </div>
-  </div>
-    
-    <!-- Prism -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-jsx.min.js" charset="utf-8"></script>
-    <!-- fin Prisme -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js" charset="utf-8"></script>
-    <!--<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script src="main.js" type="text/babel" data-presets="react,es2015,stage-0" charset="utf-8"></script>-->
-
-    <script src="lib/JQuery.js"></script>
+        <script src="lib/JQuery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" charset="utf-8"></script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-</body>
-</html>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+         <script src="js/main.js"></script>
+  </body>
+  </html>
