@@ -284,3 +284,10 @@ code{
 	position: absolute;
 	right: 0;
 }
+
+.wrapper-content img{
+	max-width: 400px;
+	border: 1px solid black;
+	height: 210px;
+	display: block;
+}

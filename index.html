@@ -49,8 +49,6 @@
   <div id="wrapper">
     <div id="page-wrapper" class="gray-bg">
       <div class="wrapper wrapper-content animated fadeInRight">
-        <!-- <button class="btn btn-primary btn-sm" id="reduce-ang"><i class="fa fa-compass"></i></button>
-        <button class="btn btn-primary btn-sm" id="reduce-react"><i class="fa fa-compass"></i></button> -->
         <div class="row" id="accueil">
           <div class="col-xs-12">
             <div class="ibox">
@@ -58,9 +56,10 @@
                 <h3>Accueil</h3>
               </div>
               <div class="ibox-content">
-                <p>Sur ce site, vous trouverez deux tutoriels : un pour <strong>Angular</strong> et un autre pour <strong>React</strong>.<br><br>
-                Ces tutoriels vous expliquent comment faire facilement vos premiers pas avec ces deux technologies (Installation, Création d'une application ...). <br><br>
-                Made by <strong>Cassandra CLECH</strong> & <strong>Cindy RÉBEILLÉ</strong> <br></p>
+                <p>Sur ce site, vous trouverez deux explications : l'une pour <strong>Angular</strong> et l'autre pour <strong>React</strong>.<br><br>
+                Les morceaux de codes suivants n'ont pas pour but de faire de vous des as de ces technologies, mais simplement de vous présenter les bases de leur fonctionnement.  
+                C <br><br>
+                Créé par <strong>Cassandra CLECH</strong> & <strong>Cindy RÉBEILLÉ</strong> <br></p>
               </div>
             </div>
           </div>
@@ -109,8 +108,22 @@
                   <code>cd nomAppli</code>
                   Vérifions que la création s'est bien déroulée et lançons le serveur d'Angular :
                   <code>ng serve</code>
+                  et rendez-vous dans votre navigateur à l'adresse <strong>localhost:4200</strong><br><br>
                   Nous obtenons l'écran suivant :
-                  <img src="" alt="">
+                  <img src="img/appwork.png" alt="">
+                </div>
+              </div>
+                <div class="ibox">
+                <div class="ibox-title">
+                  <h5>Arborescence</h5>
+                </div>
+                <div class="ibox-content">
+                  <p>Le dossier de votre application doit présenter les dossiers et fichiers suivants : </p>
+                  <img src="img/arbo.png" alt="">
+                  Nous n'allons pas tous les passer en revue. Seuls les fichiers <strong>index.html</strong> et <strong>src/app/app.component.ts</strong> vont nous servir pour cette introduction à Angular2.<br><br>
+                  L'extension <strong>.ts</strong> du fichier signifie qu'il écrit en TypeScript. Pour le compiler à chaque modification en fichier Js classique, tapez la commande suivante dans la console : 
+                  <code>npm start</code>
+                  A présent, ne vous préoccupez plus de la transpilation, npm le fait tout seul !
                 </div>
               </div>
               <div class="ibox">
@@ -118,15 +131,20 @@
                   <h5>Premier Composant</h5>
                 </div>
                 <div class="ibox-content">
-                  <p>Retournons dans notre invite de commande et tapons la commande suivante :</p>
-                  <code>ng new nomAppli</code>
-                  Remplacez nomAppli pour votre propre nom d'appli. <br>
-                  Placez vous dans le dossier de votre appli :
-                  <code>cd nomAppli</code>
-                  Vérifions que la création s'est bien déroulée et lançons le serveur d'Angular :
-                  <code>ng serve</code>
-                  Nous obtenons l'écran suivant :
-                  <img src="" alt="">
+                  <p>Entrons dans le vif du sujet: les composants ! Ils sont la base d'Angular2, les briques de votre application.</p>
+                  <p>Angular vous en fournit un premier, nommé <strong>AppComponent</strong>, que vous trouverez dans le fichier <strong>app.components.ts</strong>. Tous les composants possèdent l'extension <strong>component.ts</strong></p>
+                  <p>Vous pouvez les créer à la main ou faire appel aux lignes de commande :</p>
+                  <code>ng generate component nomComposant</code><br>
+                  <p>Ouvrez le composant créé par Angular. Il possède déjà du code, un peu obscur au départ.</p>
+                  <p>La première ligne est là pour importer un des nombreux modules d'Angular. Ici le module Component, toujours présent.</p>
+                  <code>import { Component } from '@angular/core';</code>
+                  <p>Vient ensuite un premier décorateur : <strong>@Component</strong>. Il sert de configuration à votre composant.</p>
+                  <code type="javascript">@Component({<br>
+                    selector: 'app-root', //défini le nom de la balise html qui appelra votre composant.<br>
+                    templateUrl: './app.component.html', //défini le fichier html nécessaire au composant.<br>
+                    styleUrls: ['./app.component.css'] //défini le fichier de style utilisé par votre composant. <br>
+                  })</code>
+                  <p>Vient ensuite le code à proprement parlé de votre composant, représenté par une classe :</p>
                 </div>
               </div>
             </div>
