@@ -13,7 +13,7 @@ ReactDOM.render(<Button />, document.getElementById('buttonReact'));
 class Button2 extends React.Component {
   render() {
     return (
-      <div className="myButton" style={{backgroundColor: "#f1c40f", color: "#2c3e50"}}>
+      <div className="myButton" style={{backgroundColor: "#f1c40f", color: "#2c3e50" }}>
         Bouton
       </div>
     );

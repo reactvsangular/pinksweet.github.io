@@ -1,20 +1,24 @@
 .myButton {
   display: inline-block;
-  background-color: #e67e22;
-  color: #e6e6e6;
   font-size: 15px;
-  padding: 10px;
-  border-radius: 6px;
+  color: white;
+  padding: 5px;
+  background-color: grey;
   border: 1px solid #e6e6e6;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 body{
-	background-color: #2f4050;
 	font-size: 13px;
 	color: #676a6c;
 	overflow-x : hidden;
 }
+
+#accueil, #prerequis {
+  text-align: center;
+}
+
 
 #wrapper{
 	width: 100%;
@@ -28,13 +32,16 @@ body{
 
 .navbar-static-side{
 	z-index: 2001;
-	position: absolute;
+	position: fixed;
+  top: 0;
+  left: 0;
 	width: 220px;
+  height: 100vh;
 }
 
-.pace-done .navbar-static-side, 
-.pace-done .nav-header, 
-.pace-done li.active, 
+.pace-done .navbar-static-side,
+.pace-done .nav-header,
+.pace-done li.active,
 .pace-done #page-wrapper{
 	transition: all 0.4s;
 }
@@ -74,7 +81,8 @@ body{
 
 #page-wrapper{
 	margin: 0 0 0 220px;
-	position: inherit;
+	position: static;
+  overflow: hidden;
 	min-height: 1200px;
 }
 
@@ -131,12 +139,30 @@ body{
 	animation-name: fadeInRight;
 }
 
-.b-r{
-	border-right: 5px double #8c8c8c;
-	min-height: 1200px;
+.columns {
+  display: flex;
+  flex-direction: row;
+  position: relative;
 }
 
-.page-heading{
+.angular {
+  width: 50%;
+}
+
+.separator {
+  position: absolute;
+  height: 100%;
+  margin-left: 49.8%;
+  border-right: 2px solid grey;
+  border-left: 2px solid grey;
+  width: 5px;
+}
+
+.react {
+  width: 50%;
+}
+
+ading{
 	border-top: 0;
 }
 
@@ -144,7 +170,7 @@ body{
 	background-color: white;
 }
 
-.page-heading h2{
+.page-heading {
 	text-align: center;
 }
 
@@ -244,10 +270,9 @@ code{
 }
 
 .img-header{
-	position: absolute;
 	height: 40px;
-	top: 0;
 	margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .footer{

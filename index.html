@@ -12,80 +12,78 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="pace-done">
-  <div id="wrapper">
-    <nav class="navbar-default navbar-static-side" role="navigation">
-      <div class="sidebar-collapse">
-        <ul class="nav" id="side-menu">
-          <li class="nav-header">
-            <div class="profile-element">
-              <span>
-                <img src="img/logo.png" alt="Logo iut">
-              </span>
-            </div> 
-            <div class="logo-element">
-              IUT
-            </div>   
-          </li>
-          <li>
-            <a href="">
-              <i class="fa fa-compass"></i>
-              <span class="nav-label">Accueil</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <i class="fa fa-compass"></i>
-              <span class="nav-label">Prérequis</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <i class="fa fa-compass"></i>
-              <span class="nav-label">Pour commencer</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <i class="fa fa-compass"></i>
-              <span class="nav-label">Tutoriels</span>
-            </a>
-          </li>
-        </ul>
-      </div> 
-    </nav> 
-    <div id="page-wrapper" class="gray-bg">
-      <div class="row border-bottom">
-        <nav class="navbar navbar-static-top" role="navigation">
-          <div class="navbar-header">
-            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#">
-              <i class="fa fa-bars"></i> 
-            </a>
+  <nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+      <ul class="nav" id="side-menu">
+        <li class="nav-header">
+          <div class="profile-element">
+            <span>
+              <img src="img/logo.png" alt="Logo iut">
+            </span>
           </div>
-        </nav>
-      </div>
+          <div class="logo-element">
+            IUT
+          </div>
+        </li>
+        <li>
+          <a href="#accueil">
+            <i class="fa fa-compass"></i>
+            <span class="nav-label">Accueil</span>
+          </a>
+        </li>
+        <li>
+          <a href="#prerequis">
+            <i class="fa fa-compass"></i>
+            <span class="nav-label">Prérequis</span>
+          </a>
+        </li>
+        <li>
+          <a href="#tutoriel">
+            <i class="fa fa-compass"></i>
+            <span class="nav-label">Tutoriels</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div id="wrapper">
+    <div id="page-wrapper" class="gray-bg">
       <div class="wrapper wrapper-content animated fadeInRight">
         <!-- <button class="btn btn-primary btn-sm" id="reduce-ang"><i class="fa fa-compass"></i></button>
         <button class="btn btn-primary btn-sm" id="reduce-react"><i class="fa fa-compass"></i></button> -->
-        <div class="row">
+        <div class="row" id="accueil">
+          <div class="col-xs-12">
+            <div class="ibox">
+              <div class="ibox-title">
+                <h3>Accueil</h3>
+              </div>
+              <div class="ibox-content">
+                <p>Sur ce site, vous trouverez deux tutoriels : un pour <strong>Angular</strong> et un autre pour <strong>React</strong>.<br><br>
+                Ces tutoriels vous expliquent comment faire facilement vos premiers pas avec ces deux technologies (Installation, Création d'une application ...). <br><br>
+                Made by <strong>Cassandra CLECH</strong> & <strong>Cindy RÉBEILLÉ</strong> <br></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="prerequis">
           <div class="col-xs-12">
             <div class="ibox">
               <div class="ibox-title">
                 <h3>Prérequis</h3>
               </div>
               <div class="ibox-content">
-                Pour ce tutoriel, nous partons du principe que vous connaissez le HTML, le CSS et bien-sûr le Javascript. 
+                Pour ce tutoriel, nous partons du principe que vous connaissez le HTML, le CSS et bien-sûr le Javascript. <br><br>
 
-                Si vous avez déjà jeté un coup d'oeil à Angular2, vous avez pu remarquer l'utilisation exclusif de TypeScript et non pas de Javascript pur. C'est pourquoi, les morceaux de code suivants sont redigés en TypeScript. Si vous ne connaissez pas ce sur-ensemble, faites un tour sur le <a href="https://www.typescriptlang.org/docs/home.html">site officiel</a>
+                Si vous avez déjà jeté un coup d'oeil à Angular2, vous avez pu remarquer l'utilisation exclusif de TypeScript et non pas de Javascript pur. C'est pourquoi, les morceaux de code suivants sont redigés en TypeScript. Si vous ne connaissez pas ce sur-ensemble, faites un tour sur le <a href="https://www.typescriptlang.org/docs/home.html">site officiel.</a><br><br>
 
                 Avant de débuter le tutoriel, installez <a href="https://www.npmjs.com/get-npm">node.js ainsi que npm</a> sur votre ordinateur.
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-6 b-r angular">
+        <div class="columns" id="tutoriel">
+          <div class="angular">
             <div class="row wrapper white-bg page-heading">
-              <h2>Angular 2</h2>
               <img src="angularLogo.png" class="img-header">
             </div>
             <div class="wrapper wrapper-content">
@@ -107,11 +105,11 @@
                   <p>Retournons dans notre invite de commande et tapons la commande suivante :</p>
                   <code>ng new nomAppli</code>
                   Remplacez nomAppli pour votre propre nom d'appli. <br>
-                  Placez vous dans le dossier de votre appli : 
+                  Placez vous dans le dossier de votre appli :
                   <code>cd nomAppli</code>
-                  Vérifions que la création s'est bien déroulée et lançons le serveur d'Angular : 
+                  Vérifions que la création s'est bien déroulée et lançons le serveur d'Angular :
                   <code>ng serve</code>
-                  Nous obtenons l'écran suivant : 
+                  Nous obtenons l'écran suivant :
                   <img src="" alt="">
                 </div>
               </div>
@@ -123,20 +121,20 @@
                   <p>Retournons dans notre invite de commande et tapons la commande suivante :</p>
                   <code>ng new nomAppli</code>
                   Remplacez nomAppli pour votre propre nom d'appli. <br>
-                  Placez vous dans le dossier de votre appli : 
+                  Placez vous dans le dossier de votre appli :
                   <code>cd nomAppli</code>
-                  Vérifions que la création s'est bien déroulée et lançons le serveur d'Angular : 
+                  Vérifions que la création s'est bien déroulée et lançons le serveur d'Angular :
                   <code>ng serve</code>
-                  Nous obtenons l'écran suivant : 
+                  Nous obtenons l'écran suivant :
                   <img src="" alt="">
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-xs-6 react">
+          <div class="separator"></div>
+          <div class="react">
             <div class="row wrapper white-bg page-heading">
-                <h2>React Js</h2>
-                <img src="reactLogo.png" class="img-header">
+              <img src="reactLogo.png" class="img-header">
             </div>
             <div class="wrapper wrapper-content">
               <div class="ibox">
@@ -146,7 +144,7 @@
                 <div class="ibox-content">
                     <p>Commençons par installer ReactJs. <br/> Ouvrez une invite de commande et tapez-y la commande suivante :</p>
                     <code>npm install -g create-react-app</code>
-                    Cette ligne de commande nous permet de ne pas commencer une application "nue". Toutes vos futures applications ReactJs seront déjà configurées avec Babel ou encore WebPack. 
+                    Cette ligne de commande nous permet de ne pas commencer une application "nue". Toutes vos futures applications ReactJs seront déjà configurées avec Babel ou encore WebPack.
                 </div>
               </div>
               <div class="ibox">
@@ -157,7 +155,7 @@
                     <p>Retournez dans votre invite de commande et tapez la commande suivante :</p>
                     <code>create-react-app nomAppli</code>
                     Remplacez nomAppli pour votre propre nom d'appli. <br>
-                    Placez vous dans le dossier de votre appli : 
+                    Placez vous dans le dossier de votre appli :
                     <code>cd nomAppli</code>
 
                 </div>
@@ -168,40 +166,34 @@
                 </div>
                 <div class="ibox-content">
                     <p>Pour débuter, rendons-nous dans notre fichier Js et tapons les lignes suivantes :</p>
-                    <pre><code class="language-jsx">
-                      ReactDOM.render(
-                      &lt;h1&gt;Bonjour, voici du texte !&lt;/h1&gt;,
-                      document.getElementById('bonjour')
-                      );
-                    </code></pre>
+                    <pre><code class="language-jsx">ReactDOM.render(
+  &lt;h1&gt;Bonjour, voici du texte !&lt;/h1&gt;,
+  document.getElementById('bonjour')
+);</code></pre>
                     Félicitations vous venez de créer votre premier élément de DOM en JSX : une balise titre H1. <br>
                     Et si nous créions un bouton ?
-                    <pre><code class="language-jsx">
-                      class Button extends React.Component {
-                      render() {
-                      return (
-                        &lt;div className="myButton"&gt;
-                          Bouton
-                        &lt;/div&gt;
-                      );
-                      }
-                      }
-                    </code></pre>
-                    <button class="myButton">Bouton</button> <br>
+                    <pre><code class="language-jsx">class Button extends React.Component {
+  render() {
+    return (
+      &lt;div className="myButton"&gt;
+        Bouton
+      &lt;/div&gt;
+    );
+  }
+}</code></pre>
+                    <div id="buttonReact"></div> <br>
                     Un peu triste, non ? Ajoutons du style !
-                    <pre><code class="language-jsx">
-                      class Button2 extends React.Component {
-                      render() {
-                      return (
-                        &lt;div className=&quot;myButton&quot; style={{backgroundColor: &quot;#f1c40f&quot;, color: &quot;#2c3e50&quot;}}&gt;
-                          Bouton
-                        &lt;/div&gt;
-                      );
-                      }
-                      }
+                    <pre><code class="language-jsx">class Button2 extends React.Component {
+  render() {
+    return (
+      &lt;div className=&quot;myButton&quot; style={{backgroundColor: &quot;#f1c40f&quot;, color: &quot;#2c3e50&quot;}}&gt;
+        Bouton
+      &lt;/div&gt;
+    );
+  }
+}
 
-                      ReactDOM.render(&lt;Button2 /&gt;, document.getElementById('buttonReactStyle'));
-                    </code></pre>
+ReactDOM.render(&lt;Button2 /&gt;, document.getElementById('buttonReactStyle'));</code></pre>
                     <div id="buttonReactStyle"></div>
                 </div>
               </div>
@@ -210,19 +202,22 @@
                   <h5>Les props</h5>
                 </div>
                 <div class="ibox-content">
-                    <pre><code class="language-jsx">
-                        class Button extends React.Component {
-                        render() {
-                        return (
-                          &lt;div className=&quot;myButton&quot;&gt;
-                            {this.props.text}
-                          &lt;/div&gt;
-                        );
-                        }
-                        }
+                  Les props sont comme les arguments d'une fonction, ils permettent de "paramêtrer" le composant.<br>
+                  Dans l'exemple suivant, on crée un bouton dont le texte est défini par la props "text".<br>
+                  On se retrouve donc avec un bouton contenant le texte "Nouveau texte".
+                  <br>
+                  <br>
+                    <pre><code class="language-jsx">class Button extends React.Component {
+  render() {
+    return (
+      &lt;div className=&quot;myButton&quot;&gt;
+        {this.props.text}
+      &lt;/div&gt;
+    );
+  }
+}
 
-                        ReactDOM.render(&lt;Button text=&quot;Nouveau texte&quot; /&gt;, document.getElementById('buttonReactProps'));
-                  </code></pre>
+ReactDOM.render(&lt;Button text=&quot;Nouveau texte&quot; /&gt;, document.getElementById('buttonReactProps'));</code></pre>
                   <div id="buttonReactProps"></div>
                 </div>
               </div>
@@ -231,42 +226,47 @@
                   <h5>La State</h5>
                 </div>
                 <div class="ibox-content">
-                    <pre><code class="language-jsx">
-                      class Button extends React.Component {
-                      state = {
-                      clicked: false
-                      }
+                  La state est l'état interne d'un élément. <br>
+                  Si le composant était une voiture cela serait le niveau de carburant, la vitesse courante, etc...<br>
+                  Ici la state contient une variable permettant de savoir si l'utilisateur a cliqué sur le bouton.<br>
+                  On ajuste alors la représentation graphique du bouton en fonction de cette dernière.
 
-                      constructor() {
-                      super();
-                      this.handleClick = this.handleClick.bind(this);
-                      }
+                  <br>
+                  <br>
+                    <pre><code class="language-jsx">class Button extends React.Component {
+  state = {
+    clicked: false
+  }
 
-                      handleClick() {
-                      this.setState({ clicked: !this.state.clicked });
-                      }
+  constructor() {
+    super();
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-                      render() {
-                      return (
-                        &lt;div
-                          className=&quot;myButton&quot;
-                          style={{ backgroundColor: this.state.clicked ? 'red' : 'blue' }}
-                          onClick={this.handleClick}
-                        &gt;
-                          {this.props.text}
-                        &lt;/div&gt;
-                      );
-                      }
-                      }
+  handleClick() {
+    this.setState({ clicked: !this.state.clicked });
+  }
 
-                      ReactDOM.render(&lt;Button text=&quot;Changement&quot; /&gt;, document.getElementById('buttonReactState'));
-                    </code></pre>
+  render() {
+    return (
+      &lt;div
+        className=&quot;myButton&quot;
+        style={{ backgroundColor: this.state.clicked ? 'red' : 'blue' }}
+        onClick={this.handleClick}
+      &gt;
+        {this.props.text}
+      &lt;/div&gt;
+    );
+  }
+}
+
+ReactDOM.render(&lt;Button text=&quot;Changement&quot; /&gt;, document.getElementById('buttonReactState'));</code></pre>
                     <div id="buttonReactState"></div>
                 </div>
               </div>
             </div>
           </div>
-        </div> 
+        </div>
       </div>
 
 
@@ -276,8 +276,8 @@
         <!-- fin Prisme -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js" charset="utf-8"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js" charset="utf-8"></script>
-<!--         // <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-        // <script src="main.js" type="text/babel" data-presets="react,es2015,stage-0" charset="utf-8"></script> -->
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script src="main.js" type="text/babel" data-presets="react,es2015,stage-0" charset="utf-8"></script>
 
         <script src="lib/JQuery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" charset="utf-8"></script>
