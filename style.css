@@ -285,7 +285,7 @@ code{
 	right: 0;
 }
 
-.wrapper-content img{
+.ibox-content img{
 	max-width: 400px;
 	border: 1px solid black;
 	height: 210px;
